@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LeaveRight - Never Be Late Again</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon"><i class="fas fa-clock"></i></span>
+                <span class="logo-text">LeaveRight</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#prototype">Prototype</a></li>
+                <li><a href="#development">Development</a></li>
+                <li><a href="#calculator">Calculator</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#info">Info</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="clouds" aria-hidden="true">
+        <div class="cloud cloud--1"></div>
+        <div class="cloud cloud--2"></div>
+        <div class="cloud cloud--3"></div>
+    </div>
+    <div class="road-animation" aria-hidden="true">
+        <div class="speed-car">
+            <span class="speed-lines"></span>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Never Miss a Moment</h1>
+            <p class="hero-subtitle">Calculate the perfect departure time and always arrive on time</p>
+            <a href="#prototype" class="cta-button">View Prototype</a>
+        </div>
+        <div class="hero-animation">
+            <div class="animated-clock"></div>
+        </div>
+    </section>
+
+    <!-- Project Description -->
+    <section id="features" class="description">
+        <div class="container">
+            <h2 class="section-title">What is LeaveRight?</h2>
+            <div class="description-grid">
+                <div class="description-card">
+                    <div class="card-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <h3>What It Is</h3>
+                    <p>LeaveRight is an intelligent web application designed to solve one of the most common daily problems: determining the exact time to leave to arrive on time. Our application takes into account distance, transportation mode, and desired arrival time to calculate optimal departure with precision.</p>
+                </div>
+                <div class="description-card">
+                    <div class="card-icon"><i class="fas fa-exclamation-triangle"></i></div>
+                    <h3>The Problem</h3>
+                    <p>People frequently miscalculate travel time. They don't account for traffic, transportation type, delays, or weather. This causes chronic lateness, stress, missed opportunities, and impacts academic and professional performance negatively.</p>
+                </div>
+                <div class="description-card">
+                    <div class="card-icon"><i class="fas fa-star"></i></div>
+                    <h3>Why It Matters</h3>
+                    <p>Time management is critical for students. Being late impacts grades, builds negative reputation, and increases anxiety. LeaveRight empowers users to control schedules and eliminates stress from rushing or arriving late.</p>
+                </div>
+                <div class="description-card">
+                    <div class="card-icon"><i class="fas fa-bullseye"></i></div>
+                    <h3>What Makes It Unique</h3>
+                    <p>Unlike simple calculators, LeaveRight adds intelligent buffer time and accounts for real-world conditions. It considers transportation methods with accurate speeds and adds safety margins. This comprehensive approach ensures more accurate, reliable results.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Development Process -->
+    <section id="development" class="development">
+        <div class="container">
+            <h2 class="section-title">Development Process</h2>
+
+            <div class="development-intro">
+                <h3>1. Version Timeline (Alpha - Beta - Final)</h3>
+            </div>
+
+            <div class="dev-grid">
+                <article class="dev-card">
+                    <h4 class="dev-title">🔴 Alpha Version</h4>
+                    <p class="dev-text">My first prototype was just a basic math tool with a simple dark interface. Users could manually type the distance, pick their walking speed, and choose transport or preparation buffers from standard, generic browser dropdowns. It had a basic traffic slider (1-10) and calculated a static departure time. The trip history was a boring vertical text list, and deleting cards had a bug that reloaded the whole page. The settings screen was also very minimal.</p>
+                    <div class="dev-media">
+                        <video controls preload="metadata" poster="images/alpha-poster.jpg">
+                            <source src="media/alpha.mp4" type="video/mp4">
+                            Your browser does not support the video tag. <a href="media/alpha.mp4">Download Alpha video</a>.
+                        </video>
+                    </div>
+                </article>
+
+                <article class="dev-card">
+                    <h4 class="dev-title">🟡 Beta Version</h4>
+                    <p class="dev-text">For the Beta, I completely rebuilt the UI to make it look modern. I replaced the plain background with a live, animated New York nightscape using HTML5 Canvas (with moving cars and blinking windows). I used a "Glassmorphism" style for all cards, turning them into blurred frosted glass. I deleted the boring dropdowns and made custom tiles with neat vehicle icons and toggle pills for buffers. The traffic slider also became colorful, changing from green to red. Finally, I added a sidebar navigation menu to switch pages instantly.</p>
+                    <div class="dev-media">
+                        <video controls preload="metadata" poster="images/beta-poster.jpg">
+                            <source src="media/beta.mp4" type="video/mp4">
+                            Your browser does not support the video tag. <a href="media/beta.mp4">Download Beta video</a>.
+                        </video>
+                    </div>
+                </article>
+
+                <article class="dev-card">
+                    <h4 class="dev-title">🟢 Final Product</h4>
+                    <p class="dev-text">This is the ultimate version with real utility. I integrated a fully interactive map right into the main dashboard to visualize routes. I also built a proper Stats tab with colorful analytical charts (bar, line, and donut charts) showing total trips and transport choices.
+
+But the smartest feature is the adaptive learning survey: after saving a trip, you can log if you were late or early. The app calculates a rolling average of your last 5 trips and automatically fixes future calculations just for you! I also added email reminders, a 5-language switcher, and light/dark theme toggles.</p>
+                    <div class="dev-media">
+                        <video controls preload="metadata" poster="images/final-poster.jpg">
+                            <source src="media/final.mp4" type="video/mp4">
+                            Your browser does not support the video tag. <a href="media/final.mp4">Download Final video</a>.
+                        </video>
+                    </div>
+                </article>
+            </div>
+
+            <div class="evidence-development">
+                <h3>Evidence of Development</h3>
+                <p>To prove Maulen and I built this app, here is the technical breakdown. We coded our initial Alpha version locally in Visual Studio using basic JavaScript. Later, we migrated the project to Base44 to build the Final version, which allowed us to use React and connect a real database to make the calculator much smarter.</p>
+
+                <h4>Code Evolution: From Simple Math to Smart Logic</h4>
+
+                <p>In the Alpha version, our code was just a rigid math formula. It calculated the travel time but completely ignored human habits or changing weather:</p>
+                <figure style="border:1px solid #ccc;padding:12px;max-width:680px">
+                    <img src="images/alpha-code.jpeg" alt="Alpha code screenshot" style="width:100%;height:auto;display:block" />
+                    <figcaption style="padding-top:6px;text-align:center">Место для фото — код Alpha версии</figcaption>
+                </figure>
+
+                <p>For the Final version in Base44, Maulen and I made the app adaptive. First, the app connects to our Base44 database to check if the user has a history of being late, and pulls their personal time adjustment:</p>
+                <figure style="border:1px solid #ccc;padding:12px;max-width:680px">
+                    <img src="images/final-code.jpeg" alt="Final code screenshot" style="width:100%;height:auto;display:block" />
+                    <figcaption style="padding-top:6px;text-align:center">Место для фото — код Final версии (Base44)</figcaption>
+                </figure>
+
+                <p>Next, our new logic applies live environmental multipliers (traffic/weather) and automatically injects the user's personal adjustment into the final formula:</p>
+                <figure style="border:1px solid #ccc;padding:12px;max-width:680px">
+                    <img src="images/multiplier-code.jpeg" alt="Live multipliers code screenshot" style="width:100%;height:auto;display:block" />
+                    <figcaption style="padding-top:6px;text-align:center">Место для фото — код применения live multipliers</figcaption>
+                </figure>
+
+                <h4>Visual Proof: Before vs. After</h4>
+                <ul>
+                    <li><strong>The Inputs:</strong> Alpha used standard, generic browser dropdowns that were tiny and hard to use. In the Final version, we built custom tile buttons with transport icons and sleek toggle pills.</li>
+                    <li><strong>The Map Layer:</strong> Our old Visual Studio prototype had no route visualization, while our Base44 version features a real interactive map component.</li>
+                    <li><strong>Bug Fix:</strong> In Alpha, deleting a history card used a crude script that forced a glitchy page reload. In the final product, Maulen and I fixed this so cards disappear instantly and smoothly using React states.</li>
+                </ul>
+            </div>
+
+            <div class="feedback-evidence">
+                <h3>Feedback Evidence</h3>
+                <div class="feedback-grid">
+                    <article class="feedback-card">
+                        <h4>Alpha stage interview</h4>
+                        <div class="feedback-link">
+                            <a href="https://youtu.be/LCB_B8Oo0_o?si=MWGinsi-thmkYrfl" target="_blank" rel="noopener noreferrer">Watch Alpha stage interview on YouTube</a>
+                        </div>
+                    </article>
+                    <article class="feedback-card">
+                        <h4>Beta stage interview</h4>
+                        <div class="feedback-link">
+                            <a href="https://youtu.be/zM2USXB9lLE?si=26XQVd106v-vtaTd" target="_blank" rel="noopener noreferrer">Watch Beta stage interview on YouTube</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <div class="final-reflection">
+                <h3>Final reflection</h3>
+
+                <p><strong>Question 1: What improved the most from Alpha to Final?</strong></p>
+                <p><strong>Answer:</strong> Honestly, the overall logic and how the app works improved the most. In the Alpha version we made in Visual Studio, it was just a simple, rigid math calculator that completely ignored real-life human habits. But in the final version on Base44, Maulen and I made it adaptive by connecting a database so it checks if a user is usually late or early, and then it automatically fixes the formula using their personal adjustment factor. Also, adding the weather multipliers and traffic levels made it way more accurate than before.</p>
+
+                <p><strong>Question 2: What feedback was most useful?</strong></p>
+                <p><strong>Answer:</strong> The most useful feedback came from our project sponsor during the Alpha stage. They told us that while our basic math worked fine, the interface looked super boring, outdated, and uninspiring with those standard browser dropdown menus. That critique really pushed us to switch to Base44 and completely redesign everything into custom clickable tiles, neat toggle pills, and an interactive map layout. It completely changed how the app feels to use every morning.</p>
+
+                <p><strong>Question 3: What would you still improve?</strong></p>
+                <p><strong>Answer:</strong> If we had more time, we would definitely connect the app to a live traffic API. Right now, our Base44 app uses a manual traffic slider where users have to guess the congestion level by themselves, which isn't always accurate. It would be much cooler and more helpful if the app could just automatically track real-life road accidents and traffic jams on its own without making the user do it manually.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Functionality -->
+    <section id="calculator" class="functionality">
+        <div class="container">
+            <h2 class="section-title">How It Works</h2>
+            <div class="functionality-wrapper">
+                <div class="functionality-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h4><i class="fas fa-ruler-combined"></i> Distance</h4>
+                        <p>How far to go</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h4><i class="fas fa-car"></i> Transport</h4>
+                        <p>Walking, driving, transit</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h4><i class="fas fa-calendar-check"></i> Arrival Time</h4>
+                        <p>When you need to arrive</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <h4><i class="fas fa-hourglass-end"></i> Departure Time</h4>
+                        <p>Perfect leaving time</p>
+                    </div>
+                </div>
+
+                <div class="calculator-section">
+                    <h3>Try It Now</h3>
+                    <form id="leave-calculator" class="calculator-form">
+                        <div class="form-group">
+                            <label for="distance">Distance (km)</label>
+                            <input type="number" id="distance" placeholder="10" min="0" step="0.1" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="transport"><i class="fas fa-car"></i> Transport</label>
+                            <select id="transport">
+                                <option value="walking"><i class="fas fa-walking"></i> Walking (5 km/h)</option>
+                                <option value="driving"><i class="fas fa-car"></i> Driving (50 km/h)</option>
+                                <option value="transit"><i class="fas fa-bus"></i> Transit (30 km/h)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="arrival-time">Arrival Time</label>
+                            <input type="time" id="arrival-time" required>
+                        </div>
+                        <button type="submit" class="calculate-btn">Calculate</button>
+                    </form>
+                    <div id="result" class="result-box"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prototype Section -->
+    <section id="prototype" class="prototype">
+        <div class="container">
+            <h2 class="section-title">Prototype</h2>
+            <div class="prototype-card">
+                <div class="prototype-overview">
+                    <h3>Interactive Preview</h3>
+                    <p>Explore the LeaveRight prototype and feel how fast planning a trip can be with animated travel visuals, timing controls, and quick departure suggestions.</p>
+                    <a href="#calculator" class="prototype-button">Open Prototype</a>
+                </div>
+                <div class="prototype-photo">
+                    <img src="images/Prototype.jpeg" alt="Your photo here">
+                    <p class="photo-note">Replace this image with your own photo.</p>
+                </div>
+                <div class="prototype-details">
+                    <div class="prototype-metrics">
+                        <span>Fast UI</span>
+                        <span>Student-ready</span>
+                        <span>Animated travel flow</span>
+                    </div>
+                    <div class="prototype-chip">Coming Soon</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Section -->
+    <section class="technical">
+        <div class="container">
+            <h2 class="section-title">Tech Stack</h2>
+            <div class="tech-grid">
+                <div class="tech-item">
+                    <div class="tech-icon"><i class="fas fa-tools"></i></div>
+                    <h4>Frontend</h4>
+                    <p>HTML5, CSS3, JavaScript</p>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon"><i class="fas fa-globe"></i></div>
+                    <h4>Platform</h4>
+                    <p>Web Browser</p>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon"><i class="fas fa-chart-bar"></i></div>
+                    <h4>Features</h4>
+                    <p>Smart Calculator</p>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon"><i class="fas fa-bolt"></i></div>
+                    <h4>Performance</h4>
+                    <p>Fast & Responsive</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sponsor Interview -->
+    <section class="interview">
+        <div class="container">
+            <h2 class="section-title">Sponsor Interview</h2>
+            <div class="full-interview">
+                <div class="interview-header">
+                    <h3>Interview with Alinur - Project Sponsor</h3>
+                </div>
+                <div class="qa-section">
+                    <div class="qa-item">
+                        <p class="question"><strong>Q: What is your initial impression of the LeaveRight project?</strong></p>
+                        <p class="answer">"The concept is excellent and addresses a real problem that affects students daily. I was impressed by how straightforward the solution is, yet effective. The timing calculation logic is sound and practical."</p>
+                    </div>
+                    <div class="qa-item">
+                        <p class="question"><strong>Q: Do you think this application has market value?</strong></p>
+                        <p class="answer">"Absolutely. The problem of being late is indeed relevant, especially among students. An application like this could be genuinely useful in everyday life. The target audience is clear, and the pain point is real."</p>
+                    </div>
+                    <div class="qa-item">
+                        <p class="question"><strong>Q: What are your thoughts on the user interface?</strong></p>
+                        <p class="answer">"The simplicity of the interface is a significant advantage. Users don't want to waste time on complex settings. The clean design makes it accessible to everyone, regardless of technical skill level."</p>
+                    </div>
+                    <div class="qa-item">
+                        <p class="question"><strong>Q: What improvements would you suggest?</strong></p>
+                        <p class="answer">"For future versions, I recommend integrating real maps services like Google Maps and incorporating live traffic data. These features would make the application truly professional-grade and competitive in the market."</p>
+                    </div>
+                    <div class="qa-item">
+                        <p class="question"><strong>Q: Final thoughts?</strong></p>
+                        <p class="answer">"The project has genuine practical value. With the suggested improvements, this could become essential for time-conscious individuals. Keep the interface simple while expanding backend capabilities."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="team">
+        <div class="container">
+            <h2 class="section-title">Meet the Team</h2>
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-photo-frame">
+                        <img src="images/Dair.jpeg" alt="Dair">
+                    </div>
+                    <h3>Dair</h3>
+                    <p class="role">Programming & Ideas</p>
+                    <p class="bio">Core logic & calculations</p>
+                </div>
+                <div class="team-card">
+                    <div class="team-photo-frame">
+                        <img src="images/Maulen.jpeg" alt="Maulen">
+                    </div>
+                    <h3>Maulen</h3>
+                    <p class="role">Design & UI/UX</p>
+                    <p class="bio">Visual identity & interface</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline & Future -->
+    <section id="info" class="timeline">
+        <div class="container">
+            <h2 class="section-title">Our Journey</h2>
+            <div class="timeline-grid">
+                <div class="timeline-item">
+                    <div class="timeline-marker"><i class="fas fa-clipboard-list"></i></div>
+                    <h4>Research</h4>
+                    <p>Analyzed needs</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"><i class="fas fa-palette"></i></div>
+                    <h4>Design</h4>
+                    <p>Built prototypes</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"><i class="fas fa-laptop-code"></i></div>
+                    <h4>Development</h4>
+                    <p>Created platform</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"><i class="fas fa-check-circle"></i></div>
+                    <h4>Testing</h4>
+                    <p>Quality assurance</p>
+                </div>
+            </div>
+
+            <div class="future-improvements">
+                <h3>Future Roadmap</h3>
+                <div class="improvements-list">
+                    <div class="improvement-item">
+                        <span class="check"><i class="fas fa-check"></i></span>
+                        <p>Google Maps</p>
+                    </div>
+                    <div class="improvement-item">
+                        <span class="check"><i class="fas fa-check"></i></span>
+                        <p>Traffic Data</p>
+                    </div>
+                    <div class="improvement-item">
+                        <span class="check"><i class="fas fa-check"></i></span>
+                        <p>Mobile App</p>
+                    </div>
+                    <div class="improvement-item">
+                        <span class="check"><i class="fas fa-check"></i></span>
+                        <p>AI Predictions</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Submission -->
+    <section class="submission">
+        <div class="container">
+            <h2 class="section-title">Project Links</h2>
+            <div class="submission-links">
+                <a href="https://your-username.github.io/LeaveRight---Never-Miss-a-Moment/" target="_blank" rel="noopener noreferrer" class="submission-link">
+                    <span class="link-icon"><i class="fas fa-globe"></i></span>
+                    <div>
+                        <p>Live Website</p>
+                        <small>GitHub Pages</small>
+                    </div>
+                </a>
+                <a href="https://github.com/your-username/LeaveRight---Never-Miss-a-Moment" target="_blank" rel="noopener noreferrer" class="submission-link">
+                    <span class="link-icon"><i class="fas fa-code-branch"></i></span>
+                    <div>
+                        <p>Source Code</p>
+                        <small>GitHub Repository</small>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 LeaveRight. Never be late again.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
